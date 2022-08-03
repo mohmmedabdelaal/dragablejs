@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mohmmedabdelaal/dragablejs/issues"
   },
-  "homepage": "https://github.com/mohmmedabdelaal/dragablejs#readme"
+  "homepage": "https://github.com/mohmmedabdelaal/dragablejs#readme",
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  }
 }
