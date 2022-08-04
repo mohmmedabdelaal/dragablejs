@@ -1,9 +1,8 @@
-import ProjectList from './App/ProjectList.js';
-
-console.log('fff');
+import ProjectList from './App/ProjectList';
 
 class App {
   static init() {
+    console.log('this is the end here');
     const activeProjectsList = new ProjectList('active');
     const finishedProjectsList = new ProjectList('finished');
     activeProjectsList.setSwitchHandlerFunction(
