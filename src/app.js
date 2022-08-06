@@ -1,30 +1,15 @@
-import ProjectList from './App/ProjectList';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
-class App {
-  static init() {
-    console.log('this is the end here');
-    const activeProjectsList = new ProjectList('active');
-    const finishedProjectsList = new ProjectList('finished');
-    activeProjectsList.setSwitchHandlerFunction(
-      finishedProjectsList.addProject.bind(finishedProjectsList)
-    );
-    finishedProjectsList.setSwitchHandlerFunction(
-      activeProjectsList.addProject.bind(activeProjectsList)
-    );
+const button = document.querySelector('button');
 
-    // const timerId = setTimeout(this.startAnalytics, 3000);
+button.addEventListener('click', () => {
+  const text = button.textContent;
 
-    // document.getElementById('stop-analytics-btn').addEventListener('click', () => {
-    //   clearTimeout(timerId);
-    // });
-  }
-
-  static startAnalytics() {
-    const analyticsScript = document.createElement('script');
-    analyticsScript.src = 'assets/scripts/Utility/Analytics.js';
-    analyticsScript.defer = true;
-    document.head.append(analyticsScript);
-  }
-}
-
-App.init();
+  navigator.clipboard
+    .writeText(text)
+    .then((cpy) => {
+      console.log(cpy);
+    })
+    .catch((err) => {});
+});

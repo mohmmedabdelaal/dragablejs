@@ -13,15 +13,24 @@
     "url": "git+https://github.com/mohmmedabdelaal/dragablejs.git"
   },
   "author": "Mohamed abdelaal",
+  "browsersList": "> 2%",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/mohmmedabdelaal/dragablejs/issues"
   },
   "homepage": "https://github.com/mohmmedabdelaal/dragablejs#readme",
   "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-loader": "^8.2.5",
     "eslint": "^8.21.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "core-js": "^3.24.1",
+    "promise-polyfill": "8.2.3",
+    "regenerator-runtime": "^0.13.9"
   }
 }
